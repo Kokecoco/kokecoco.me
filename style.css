@@ -65,3 +65,38 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
+
+nav[aria-label="パンくずリスト"] ol {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav[aria-label="パンくずリスト"] li {
+  display: inline;
+}
+
+nav[aria-label="パンくずリスト"] li a {
+  text-decoration: none;
+  color: #0073e6;
+}
+
+nav[aria-label="パンくずリスト"] li a:hover {
+  text-decoration: underline;
+}
+
+nav[aria-label="パンくずリスト"] li::after {
+  content: ">";
+  margin: 0 0.5rem;
+  color: #666;
+}
+
+nav[aria-label="パンくずリスト"] li:last-child::after {
+  content: "";
+}
+
+a[tabindex="-1"] {
+  color: gray;
+}
